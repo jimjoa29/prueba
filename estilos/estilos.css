@@ -92,7 +92,10 @@ nav {
     align-items: center;
     background-color: #ffffffd5;
     border-radius: 5px;
-
+    border: 1px solid var(--fondoPrincipal);
+    border-top: 2px solid var(--fondoPrincipal);
+    border-bottom: 2px solid var(--fondoPrincipal);
+    
     /* position: fixed; */
 
 }
@@ -261,7 +264,7 @@ a {
     display: flex;
     gap: 1.5rem;
     margin-top: 20px;
-    
+
 }
 
 .presentacion-redes-sociales i {
@@ -303,6 +306,11 @@ a {
 }
 
 /* MAIN */
+
+
+main {
+    width: 100%;
+}
 
 /* NOSOTROS*/
 
@@ -351,10 +359,18 @@ a {
 
 }
 
-.nosotros-presentacion-tyd h3 {
-    font-size: 3em;
-
+.nosotros-titulo-span {
+    display: flex;
+    flex-direction: column;
 }
+
+.nosotros-presentacion-tyd h3 {
+    font-size: 2.4em;
+}
+
+
+
+
 
 .nosotros-presentacion-tyd p {
     /* padding: 20px; */
@@ -409,7 +425,7 @@ a {
 .promocion {
     width: 100%;
     height: 300px;
-   
+
     margin-top: 30px 0;
     display: flex;
     justify-content: center;
@@ -469,7 +485,7 @@ a {
     /* background-image: linear-gradient(rgba(53, 47, 0, 0.334), rgba(80, 80, 80, 0.338)), url(../img/bg-mujer3.png); */
     background-position: center;
     background-size: cover;
-    
+
 
 
 
@@ -698,7 +714,7 @@ a {
 }
 
 .form {
-   
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -802,7 +818,7 @@ input[type='submit']:hover {
         width: 200px;
     }
 
-  
+
 }
 
 .footer {
@@ -819,7 +835,7 @@ input[type='submit']:hover {
 
 .footer-grig {
     width: 83%;
-   
+
     /* background-color: #fff; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -831,13 +847,13 @@ input[type='submit']:hover {
     flex-direction: column;
 }
 
-.footer-menu ul li a{
+.footer-menu ul li a {
     color: var(--blanco);
 }
 
 .footer-copy {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -852,14 +868,14 @@ input[type='submit']:hover {
 
 .footer-redes {
     width: 100%;
-    height: 100%;   
+    height: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     /* align-items: end; */
 
-    
+
 }
 
 .footer-redes p {
@@ -868,7 +884,7 @@ input[type='submit']:hover {
 
 .presentacion-redes-sociales {
     width: 100%;
-   
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -879,7 +895,7 @@ input[type='submit']:hover {
     font-size: 0.8rem;
 }
 
-.footer-redes-sociales i{
+.footer-redes-sociales i {
     color: var(--blanco);
     font-size: 2.5rem;
     margin-right: 10px;
@@ -907,4 +923,139 @@ input[type='submit']:hover {
     width: 65px;
     height: 65px;
 
+}
+
+
+/*:::::::::::Pagina Nosotros:::::::::::::*/
+
+
+.main-nosotros {
+    width: 83%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nosotros-page h1 {
+    font-size: 3rem;
+    padding-top: 50px;
+}
+
+.main-nosotros-art1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.dueña,
+.podologia {
+    width: 50%;
+    padding: 50px 0 50px 0;
+
+}
+
+.main-nosotros p {
+    margin: 10px 0;
+
+    /* column-count: 3; */
+}
+
+@media screen and (max-width: 992px) {
+
+    .main-nosotros {
+        width: 90%;
+    }
+
+    .dueña,
+    .podologia {
+        width: 98%;
+    }
+}
+
+/* ::::::::::::Servicio::::::::::::::::::::: */
+
+.main-servicio {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+}
+
+.main-servicios-resumen {
+    width: 83%;
+    color: var(--hamburguer--icon);
+    column-count: 2;
+}
+
+@media screen and (max-width: 992px) { 
+   
+    .main-servicios-resumen {
+        width: 110%;
+        column-count: 1;
+    }
+}
+
+
+/* ::::::::::::Contacto::::::::::::::::::: */
+
+.main-contacto {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+}
+
+.main-contacto h1 {
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+
+.main-contacto-section {
+    width: 83%;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+}
+
+.main-contacto-map {
+    flex: 2;
+
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.main-contacto-direccion {
+    background-color: 100%;
+    background-color: rgba(0, 0, 0, 0.027);
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--hamburguer--icon);
+    flex: 1;
+}
+
+.main-servicios-direccion p {
+    font-size: 1.4rem;
+}
+
+.servicio-span {
+    color: var(--hamburguer--icon);
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+
+    .main-contacto-section {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    
+    
 }
