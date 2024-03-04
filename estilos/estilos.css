@@ -34,8 +34,12 @@ body {
 
 }
 
+.negrita {
+    font-weight: bold;
+}
+
 .sombra {
-    text-shadow: 3px 3px 2px #fff;
+    text-shadow: 2px 1px 1px #fff;
 }
 
 .center {
@@ -59,8 +63,8 @@ body {
 /* HEADER */
 
 .header {
-    /* background-image: linear-gradient(rgba(43, 43, 43, 0.517), rgba(247, 246, 246, 0.3)), url("../img/s2.jpg"); */
-    background-image: url(../img/s2.jpg);
+    background-image: linear-gradient(rgba(202, 174, 149, 0.517), rgba(247, 246, 246, 0.3)), url("../img/s2.jpg");
+    /* background-image: url(../img/s2.jpg); */
     height: 600px;
     width: 100%;
     display: flex;
@@ -255,7 +259,7 @@ a {
 }
 
 .presentacion-boton:hover {
-    background-color: #fcbe06e4;
+    background-color: var(--hover-btn)
     /* border: 1px solid var(--principal);     */
 }
 
@@ -368,10 +372,6 @@ main {
     font-size: 2.4em;
 }
 
-
-
-
-
 .nosotros-presentacion-tyd p {
     /* padding: 20px; */
     font-family: 'Roboto', sans-serif;
@@ -425,16 +425,12 @@ main {
 .promocion {
     width: 100%;
     height: 300px;
-
     margin-top: 30px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
-
-
     background: linear-gradient(to right, #251e0f 1%, #f0bb20 100%);
-
     background-image: linear-gradient(to right, #eed9ac39 1%, #6b5d3449 100%), url('../img/Oferta.png');
     background-position: center;
     background-size: cover;
@@ -442,8 +438,8 @@ main {
 }
 
 .btn-fondo-blanco {
-    background-color: var(--blanco);
-    color: var(--fondoPrincipal);
+    background-color: var(--principal);
+    color: var(--blanco);
     font-weight: 800;
     border: 1px solid var(--titulo);
     transition: 0.3s;
@@ -451,7 +447,7 @@ main {
 }
 
 .btn-fondo-blanco:hover {
-    /* background-color: var(--fondoPrincipal); */
+    background-color: var(--hover-btn);
     color: var(--blanco);
     border: 1px solid var(--hamburguer--icon);
 }
@@ -497,10 +493,11 @@ main {
 }
 
 .servicios-imagenes {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 30px;
-    flex-direction: row;
+    
     transition: 0.6s;
 }
 
@@ -516,6 +513,7 @@ main {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 
 }
 
@@ -526,6 +524,7 @@ main {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 
@@ -537,11 +536,12 @@ main {
     border-bottom-right-radius: 10px;
     font-size: 2rem;
     color: var(--blanco);
-    transition: 0.4s;
+    
 }
 
 .servicios-imagenes-contenedor:hover {
     transform: scale(1.05) translateZ(0);
+    
 
 }
 
@@ -559,14 +559,19 @@ main {
         margin: 10px;
     }
 
-    .servicios-imagenes {
-        flex-direction: column;
-    }
-
+   
     .titulo {
         text-align: center;
     }
 }
+
+@media screen and (max-width: 598px){
+    .servicios-imagenes {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 
 .flecha-subir {
@@ -741,7 +746,7 @@ main {
 
 input {
     font-family: 'Oswald', sans-serif;
-    width: 400px;
+    width: 95%;
     height: 40px;
     border: none;
     padding-left: 10px;
@@ -753,7 +758,7 @@ input {
 }
 
 textarea {
-    width: 400px;
+    width: 95%;
     height: 100px;
 
     margin-top: 10px;
@@ -767,12 +772,13 @@ textarea {
 }
 
 input[type='submit'] {
+    padding: 0 40px;
     background-color: var(--principal);
     color: var(--blanco);
     font-size: 1.3rem;
     cursor: pointer;
     transition: background 0.3s;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 
 }
 
@@ -928,6 +934,19 @@ input[type='submit']:hover {
 
 /*:::::::::::Pagina Nosotros:::::::::::::*/
 
+.banner-nosotros {
+    background-image: linear-gradient(rgba(224, 213, 198, 0.4), rgba(242, 235, 227, 0.6)), url(../img/banner-nosotros.jpg);
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+
 
 .main-nosotros {
     width: 83%;
@@ -977,6 +996,20 @@ input[type='submit']:hover {
 
 /* ::::::::::::Servicio::::::::::::::::::::: */
 
+
+.banner-servicios {
+    background-image: linear-gradient(rgba(228, 194, 149, 0.5), rgba(224, 199, 173, 0.5)), url(../img/banner-servicios.jpg);
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+
 .main-servicio {
     width: 100%;
     height: auto;
@@ -1000,10 +1033,24 @@ input[type='submit']:hover {
 
 /* ::::::::::::Contacto::::::::::::::::::: */
 
+.banner-contacto {
+    background-image: linear-gradient(rgba(228, 194, 149, 0.5), rgba(224, 199, 173, 0.5)), url(../img/banner-contacto.jpg);
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+
 .main-contacto {
     width: 100%;
     height: auto;
     padding: 30px 0;
+   
 }
 
 .main-contacto h1 {
@@ -1016,7 +1063,8 @@ input[type='submit']:hover {
     height: 350px;
     margin: 0 auto;
     display: flex;
-    gap: 50px;
+    gap: 50px; margin-bottom: 30px;
+     margin-bottom: 30px;
 }
 
 .main-contacto-map {
@@ -1059,3 +1107,165 @@ iframe {
     
     
 }
+
+/* ::::::::::::::::::Pies:::::::::::::::::::: */
+
+.header-servicio-pies {
+    background-image: none;
+    width: 100%;
+    height: auto;
+}
+
+.main-servicio-pies {
+    padding-top: 50px;
+}
+
+.titulo-pies {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.servicio-pies-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio-pies-img img {
+    width: 75%;
+    height: auto;
+    padding: 20px;
+}
+
+.servicio-pies {
+    padding-top: 70px 0;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+}
+
+.contenedor-enfermedades {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor-enfermedades-img {
+   padding: 50px;
+}
+.contenedor-enfermedades img {
+    width: 100%;
+}
+
+.enfermedades {
+   
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.enfermedades li {
+    color: inherit;
+}
+
+.servicio-pies-titulo {
+    padding-bottom: 10px;
+}
+
+.servicio-subtitulo-h4 {
+    padding: 20px 0 10px 0;
+}
+
+.tratamientos {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.tratamientos li {
+    color: inherit;
+}
+
+.ademas {
+    padding-bottom: 20px;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .titulo-pies {
+        font-size: 1.5rem;
+    }
+
+    .contenedor-enfermedades {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .contenedor-enfermedades {
+        width: 95%;
+    }
+    .servicio-pies-img img {
+        width: 100%;
+    }
+
+    .contenedor-enfermedades-img  {
+        padding: 0;
+        padding-top: 30px;
+    }   
+    
+    
+}
+
+
+
+/* ::::::::Servicio-Uñas::::::::::: */
+
+
+.servicio-una-img  {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+    background-image: url(../img/servicio-uñas-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.llamado-accion {
+    color: rgb(206, 118, 3);
+    padding: 30px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.galeria {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+} 
+
+.galeeria-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
+
+.galeeria-cards p{
+    text-align: center;
+}
+
+.galeeria-cards img {
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .galeeria-cards {
+        grid-template-columns: 1fr;
+    }
+} 
